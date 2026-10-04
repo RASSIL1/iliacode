@@ -1,0 +1,1 @@
+assert prix != 3.14

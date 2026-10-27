@@ -32,13 +32,13 @@ def charger_moteur(nom=MOTEUR_PAR_DEFAUT):
 def compter_parametres(modele):
     """Le nombre N de paramètres du moteur, la somme, sur toutes ses
     matrices et tous ses vecteurs, du produit de leurs dimensions."""
-    raise NotImplementedError("partie 2 du TP, à compléter")
+    return sum(p.numel() for p in modele.parameters())
 
 
 def memoire_poids(modele):
     """La mémoire des poids en octets, chaque paramètre occupant autant
     d'octets que son format, 2 en FP16, 4 en FP32."""
-    raise NotImplementedError("partie 2 du TP, à compléter")
+    return sum(p.numel() * p.element_size() for p in modele.parameters())
 
 
 def probas_moteur(modele, tokeniseur, texte):

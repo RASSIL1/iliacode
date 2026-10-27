@@ -46,7 +46,12 @@ def probas_moteur(modele, tokeniseur, texte):
     réellement écrit de texte, sachant ceux qui le précèdent. Le premier
     token n'a pas d'histoire, il n'est pas noté. Cette liste est l'entrée
     des fonctions entropie_croisee et perplexite de la séance 3."""
-    raise NotImplementedError("partie 3 du TP, à compléter")
+    numeros = tokeniseur(texte, return_tensors="pt")["input_ids"].to(modele.device)
+    with torch.no_grad():
+        scores = modele(numeros).logits[0].float()
+    probas = torch.softmax(scores[:-1], dim=-1)
+    ecrits = numeros[0, 1:]
+    return probas[torch.arange(len(ecrits)), ecrits].tolist()
 
 
 # ------------------------------------------------------------

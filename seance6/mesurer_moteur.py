@@ -35,12 +35,16 @@ def outil_seance3():
 
 
 def nom_du_bloc(chemin):
-    """Le bloc de langue d'un fichier du test, lu sur son dossier ou sur
-    son nom, code, francais, anglais, darija."""
-    noms = [p.lower() for p in chemin.relative_to(TEST).parts]
-    for cle, bloc in (("code", "code"), ("fr", "français"), ("dar", "darija"),
-                      ("ang", "anglais"), ("en", "anglais")):
-        if any(cle in n for n in noms[:-1]) or noms[-1].startswith(cle):
+    """Le bloc de langue d'un fichier du test, lu sur les mots de son
+    dossier et de son nom, code, francais, anglais, darija."""
+    mots = []
+    for partie in chemin.relative_to(TEST).with_suffix("").parts:
+        mots.extend(partie.lower().replace("-", "_").split("_"))
+    for cle, bloc in (("code", "code"),
+                      ("fr", "français"), ("francais", "français"),
+                      ("en", "anglais"), ("anglais", "anglais"),
+                      ("dar", "darija"), ("darija", "darija")):
+        if cle in mots:
             return bloc
     if chemin.suffix == ".py":
         return "code"

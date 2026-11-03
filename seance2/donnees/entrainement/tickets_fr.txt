@@ -1,0 +1,25 @@
+L'application se bloque quand je sauvegarde le contrat, rien ne se passe après le clic.
+Le calcul de la ristourne CNSS est faux pour un salaire supérieur au plafond.
+Impossible de valider l'adresse email avec un tiret dans le nom de domaine.
+La surface du local s'affiche en m² mais le total est calculé en m2 sans le carré.
+Le bouton enregistrer reste grisé après la modification du client.
+Erreur 500 à l'ouverture de la fiche du contrat numéro 2026/1432.
+Le montant total hors taxe ne tient pas compte de la remise de 10 pour cent.
+La recherche d'un client par son nom ne trouve pas Benoît quand on tape Benoit.
+Le fichier exporté en CSV contient des caractères bizarres à la place des accents.
+Le test de validation des emails échoue sur les adresses en majuscules.
+La date d'échéance du contrat est décalée d'un jour après la sauvegarde.
+Le tableau des ristournes ne se met pas à jour après la saisie du nouveau salaire.
+Quand je supprime un ticket, la page affiche encore le ticket supprimé.
+Les tickets en darija ne sont pas retrouvés par la recherche.
+Le calcul du plafond CNSS utilise encore la valeur de l'année dernière.
+L'écran de connexion accepte un mot de passe vide.
+La fonction qui vérifie l'email accepte une adresse sans arobase.
+Le rapport mensuel est généré deux fois quand on clique vite.
+Le champ téléphone accepte des lettres au lieu de refuser la saisie.
+L'application est très lente quand la liste des contrats dépasse mille lignes.
+Le numéro de dossier n'est pas vérifié, on peut saisir n'importe quoi.
+La ristourne plafonnée est affichée avec trois décimales au lieu de deux.
+Après la mise à jour, le contrat sauvegardé perd l'adresse du client.
+La validation du formulaire n'affiche aucun message quand l'email est invalide.
+Le total des ristournes du mois ne correspond pas à la somme des lignes.

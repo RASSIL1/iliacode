@@ -1,0 +1,15 @@
+The app freezes when I save the contract, nothing happens after the click.
+Email validation fails when the domain name contains a hyphen.
+The CNSS rebate is computed on the full salary instead of the capped salary.
+Error 500 when opening contract 2026/1432 from the search results.
+The export file shows strange characters instead of accented letters.
+The save button stays disabled after editing a customer record.
+The total before tax ignores the 10 percent discount.
+Deleting a ticket does not refresh the list, the deleted ticket is still shown.
+The login screen accepts an empty password.
+The validation test for uppercase email addresses fails.
+The monthly report is generated twice when the button is clicked quickly.
+Searching a customer by name does not find Benoît when typing Benoit.
+The rebate table does not refresh after entering the new salary.
+The phone field accepts letters instead of rejecting the input.
+The contract due date shifts by one day after saving.

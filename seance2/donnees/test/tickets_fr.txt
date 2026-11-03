@@ -1,0 +1,8 @@
+L'application se bloque lors de la sauvegarde du contrat et affiche une erreur après le clic.
+Le total des ristournes de l'année ne correspond pas au cumul des douze mois.
+Le mot de passe est accepté même quand il contient moins de huit caractères.
+La suppression d'un client laisse ses contrats affichés dans la liste.
+Le fichier PDF du contrat est généré avec la mauvaise date d'échéance.
+La recherche par numéro de dossier ne trouve rien quand le numéro contient une barre oblique.
+Le calcul de la cotisation est faux pour un salaire inférieur au minimum légal.
+Le message d'erreur du formulaire s'affiche en anglais au lieu du français.

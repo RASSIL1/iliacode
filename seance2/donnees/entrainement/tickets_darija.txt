@@ -1,0 +1,30 @@
+l'app t7bes mnin kanseivi le contrat, walou makaytra3 men ba3d le clic.
+l7sab dyal la ristourne CNSS ghalat ila kan le salaire kber men le plafond.
+l'email makaytvalidach ila kan fih tiret f le nom de domaine.
+la surface katban b m² walakin le total kayt7seb bla carré.
+le bouton enregistrer baqi gris men ba3d ma bedelt le client.
+erreur 500 mnin kan7el la fiche dyal le contrat 2026/1432.
+le total hors taxe makaykhodch la remise dyal 10 pour cent.
+la recherche b smiya makatl9ach Benoît ila ktebti Benoit.
+le fichier CSV fih des caractères khaybin blast les accents.
+le test dyal les emails kaykhsar 3la les adresses b majuscules.
+la date d'échéance katzid b nhar men ba3d la sauvegarde.
+le tableau dyal les ristournes makaytbeddelch men ba3d ma dkhelt le salaire jdid.
+mnin kanms7 ticket, la page baqa katban fiha le ticket li tms7.
+les tickets b darija makaytl9awch f la recherche.
+l7sab dyal le plafond CNSS baqi kaykhdem b la valeur dyal l3am li fat.
+l'écran dyal la connexion kay9bel mot de passe khawi.
+la fonction li katverifi l'email kat9bel adresse bla arobase.
+le rapport mensuel kaytgenera jouj merrat ila kliquiti bzerba.
+le champ téléphone kay9bel les lettres blast ma yrefusi.
+l'app t9ila bzaf mnin la liste dyal les contrats katfout alf ligne.
+le numéro dyal le dossier makaytverifach, t9der tkteb ay 7aja.
+la ristourne plafonnée katban b tlata d les décimales blast jouj.
+men ba3d la mise à jour, le contrat li sauvegardit day3a l'adresse dyal le client.
+la validation dyal le formulaire makatban fiha 7ta message ila kan l'email ghalat.
+le total dyal les ristournes dyal chher makaymatchich m3a la somme dyal les lignes.
+التطبيق معطل ملي كنسيفي العقد، والو ماكيوقع من بعد الكليك.
+حساب الريستورن ديال الضمان الاجتماعي غالط إلا كان الراتب كبير من البلافون.
+الإيميل ماكيتفاليداش إلا كان فيه تيري ف اسم الدومين.
+البوطون ديال التسجيل باقي رمادي من بعد ما بدلت الكليان.
+البحث بالاسم ماكيلقاش الكليان إلا كتبتي بلا أكسون.

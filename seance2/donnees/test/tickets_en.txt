@@ -1,0 +1,5 @@
+The application crashes when saving a contract with an empty address.
+The yearly total of rebates does not match the sum of the twelve months.
+The password is accepted even when it is shorter than eight characters.
+Deleting a customer leaves its contracts visible in the list.
+The contract PDF is generated with the wrong due date.

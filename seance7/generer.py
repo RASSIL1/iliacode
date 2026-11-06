@@ -20,7 +20,14 @@ def choisir_token(scores, temperature=0.8, p_noyau=0.95, generateur=None):
     au noyau p_noyau, et le token est tiré au sort dans ce qui reste.
     generateur est le générateur de nombres aléatoires de torch, pour
     rejouer un tirage à l'identique."""
-    raise NotImplementedError("partie 2 du TP, à compléter")
+    if temperature == 0:
+        return int(torch.argmax(scores))
+    probas = torch.softmax(scores.float().cpu() / temperature, dim=-1)
+    triees, indices = torch.sort(probas, descending=True)
+    cumul = torch.cumsum(triees, dim=-1)
+    noyau = triees * (cumul - triees < p_noyau)
+    i = torch.multinomial(noyau / noyau.sum(), 1, generator=generateur)
+    return int(indices[i])
 
 
 def generer(modele, tokeniseur, demande, n_max=200, temperature=0.8,
@@ -30,14 +37,26 @@ def generer(modele, tokeniseur, demande, n_max=200, temperature=0.8,
     apparition de la séquence d'arrêt arret (qui n'est pas rendue). Seul
     le texte écrit est rendu, sans la demande. La même graine donne le
     même texte."""
-    raise NotImplementedError("partie 2 du TP, à compléter")
+    generateur = torch.Generator().manual_seed(graine)
+    numeros = tokeniseur(demande, return_tensors="pt")["input_ids"].to(modele.device)
+    ecrits = []
+    for _ in range(n_max):
+        w = choisir_token(scores_suivant(modele, numeros), temperature, p_noyau, generateur)
+        if w == tokeniseur.eos_token_id:
+            break
+        ecrits.append(w)
+        numeros = torch.cat([numeros, torch.tensor([[w]], device=numeros.device)], dim=1)
+        texte = tokeniseur.decode(ecrits)
+        if arret and arret in texte:
+            return texte[:texte.index(arret)]
+    return tokeniseur.decode(ecrits)
 
 
 def pass_at_k(verdicts):
     """La proportion des demandes dont au moins une réponse passe tous ses
     tests. verdicts contient une liste par demande, avec un booléen par
     réponse générée, True si elle a passé les tests."""
-    raise NotImplementedError("partie 2 du TP, à compléter")
+    return sum(1 for v in verdicts if any(v)) / len(verdicts)
 
 
 # ------------------------------------------------------------

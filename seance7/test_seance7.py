@@ -138,8 +138,8 @@ def test_p2b_la_meme_graine_donne_le_meme_texte(moteur_minuscule):
     assert a == b
 
 
-# ---------------- partie 3, mesurer ----------------
-def test_p3_pass_at_k_compte_les_demandes_reussies():
+# ---------------- partie 2, mesurer ----------------
+def test_p2c_pass_at_k_compte_les_demandes_reussies():
     assert generer.pass_at_k([[True, False], [False, False], [False, True]]) == pytest.approx(2 / 3)
     assert generer.pass_at_k([[False], [False]]) == 0.0
     assert generer.pass_at_k([[True]]) == 1.0

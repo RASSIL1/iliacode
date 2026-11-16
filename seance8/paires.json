@@ -1,0 +1,1002 @@
+[
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction verifier_ticket(titre) qui renvoie True si le titre du ticket n'est pas vide, et False sinon.",
+  "reponse": "```python\ndef verifier_ticket(titre):\n    return titre != \"\"\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python verifier_ticket(titre), elle renvoie True si le titre du ticket n'est pas vide, et False sinon.",
+  "reponse": "```python\ndef verifier_ticket(titre):\n    return titre != \"\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de verifier_ticket.\n```python\ndef verifier_ticket(titre):\n    return titre != \"\"\n```",
+  "reponse": "```python\ndef test_titre_vide():\n    assert not verifier_ticket(\"\")\n\ndef test_titre_rempli():\n    assert verifier_ticket(\"Bug login\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal verifier_ticket\n```python\ndef verifier_ticket(titre):\n    return titre != \"\"\n```",
+  "reponse": "```python\ndef test_titre_vide():\n    assert not verifier_ticket(\"\")\n\ndef test_titre_rempli():\n    assert verifier_ticket(\"Bug login\")\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait verifier_ticket.\n```python\ndef verifier_ticket(titre):\n    return titre != \"\"\n```",
+  "reponse": "La fonction renvoie vrai si le titre du ticket n'est pas vide, et faux sinon."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction priorite_valide(priorite) qui renvoie True si la priorité est un entier compris entre 1 et 3.",
+  "reponse": "```python\ndef priorite_valide(priorite):\n    return isinstance(priorite, int) and 1 <= priorite <= 3\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python priorite_valide(priorite), elle renvoie True si la priorité est un entier compris entre 1 et 3.",
+  "reponse": "```python\ndef priorite_valide(priorite):\n    return isinstance(priorite, int) and 1 <= priorite <= 3\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de priorite_valide.\n```python\ndef priorite_valide(priorite):\n    return isinstance(priorite, int) and 1 <= priorite <= 3\n```",
+  "reponse": "```python\ndef test_priorite_dans_les_bornes():\n    assert priorite_valide(1) and priorite_valide(3)\n\ndef test_priorite_hors_bornes():\n    assert not priorite_valide(0) and not priorite_valide(4)\n\ndef test_priorite_non_entiere():\n    assert not priorite_valide(\"2\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal priorite_valide\n```python\ndef priorite_valide(priorite):\n    return isinstance(priorite, int) and 1 <= priorite <= 3\n```",
+  "reponse": "```python\ndef test_priorite_dans_les_bornes():\n    assert priorite_valide(1) and priorite_valide(3)\n\ndef test_priorite_hors_bornes():\n    assert not priorite_valide(0) and not priorite_valide(4)\n\ndef test_priorite_non_entiere():\n    assert not priorite_valide(\"2\")\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait priorite_valide.\n```python\ndef priorite_valide(priorite):\n    return isinstance(priorite, int) and 1 <= priorite <= 3\n```",
+  "reponse": "La fonction vérifie que la priorité est un entier entre 1 et 3. Elle refuse tout autre nombre et toute valeur qui n'est pas un entier."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction nettoyer_titre(titre) qui renvoie le titre sans espaces au début et à la fin, avec une majuscule initiale.",
+  "reponse": "```python\ndef nettoyer_titre(titre):\n    titre = titre.strip()\n    return titre[:1].upper() + titre[1:]\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python nettoyer_titre(titre), elle renvoie le titre sans espaces au début et à la fin, avec une majuscule initiale.",
+  "reponse": "```python\ndef nettoyer_titre(titre):\n    titre = titre.strip()\n    return titre[:1].upper() + titre[1:]\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de nettoyer_titre.\n```python\ndef nettoyer_titre(titre):\n    titre = titre.strip()\n    return titre[:1].upper() + titre[1:]\n```",
+  "reponse": "```python\ndef test_espaces_retires():\n    assert nettoyer_titre(\"  bug login  \") == \"Bug login\"\n\ndef test_titre_vide():\n    assert nettoyer_titre(\"   \") == \"\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal nettoyer_titre\n```python\ndef nettoyer_titre(titre):\n    titre = titre.strip()\n    return titre[:1].upper() + titre[1:]\n```",
+  "reponse": "```python\ndef test_espaces_retires():\n    assert nettoyer_titre(\"  bug login  \") == \"Bug login\"\n\ndef test_titre_vide():\n    assert nettoyer_titre(\"   \") == \"\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait nettoyer_titre.\n```python\ndef nettoyer_titre(titre):\n    titre = titre.strip()\n    return titre[:1].upper() + titre[1:]\n```",
+  "reponse": "La fonction retire les espaces autour du titre, puis met sa première lettre en majuscule. Un titre fait seulement d'espaces devient une chaîne vide."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction compter_ouverts(tickets) qui compte les tickets dont le statut vaut \"ouvert\" dans une liste de dictionnaires.",
+  "reponse": "```python\ndef compter_ouverts(tickets):\n    return sum(1 for t in tickets if t[\"statut\"] == \"ouvert\")\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python compter_ouverts(tickets), elle compte les tickets dont le statut vaut \"ouvert\" dans une liste de dictionnaires.",
+  "reponse": "```python\ndef compter_ouverts(tickets):\n    return sum(1 for t in tickets if t[\"statut\"] == \"ouvert\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de compter_ouverts.\n```python\ndef compter_ouverts(tickets):\n    return sum(1 for t in tickets if t[\"statut\"] == \"ouvert\")\n```",
+  "reponse": "```python\ndef test_aucun_ticket():\n    assert compter_ouverts([]) == 0\n\ndef test_melange_de_statuts():\n    tickets = [{\"statut\": \"ouvert\"}, {\"statut\": \"ferme\"}, {\"statut\": \"ouvert\"}]\n    assert compter_ouverts(tickets) == 2\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal compter_ouverts\n```python\ndef compter_ouverts(tickets):\n    return sum(1 for t in tickets if t[\"statut\"] == \"ouvert\")\n```",
+  "reponse": "```python\ndef test_aucun_ticket():\n    assert compter_ouverts([]) == 0\n\ndef test_melange_de_statuts():\n    tickets = [{\"statut\": \"ouvert\"}, {\"statut\": \"ferme\"}, {\"statut\": \"ouvert\"}]\n    assert compter_ouverts(tickets) == 2\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait compter_ouverts.\n```python\ndef compter_ouverts(tickets):\n    return sum(1 for t in tickets if t[\"statut\"] == \"ouvert\")\n```",
+  "reponse": "La fonction parcourt la liste des tickets et compte ceux dont le statut est \"ouvert\". Une liste vide donne 0."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction trier_par_priorite(tickets) qui renvoie la liste des tickets triée par priorité croissante.",
+  "reponse": "```python\ndef trier_par_priorite(tickets):\n    return sorted(tickets, key=lambda t: t[\"priorite\"])\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python trier_par_priorite(tickets), elle renvoie la liste des tickets triée par priorité croissante.",
+  "reponse": "```python\ndef trier_par_priorite(tickets):\n    return sorted(tickets, key=lambda t: t[\"priorite\"])\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de trier_par_priorite.\n```python\ndef trier_par_priorite(tickets):\n    return sorted(tickets, key=lambda t: t[\"priorite\"])\n```",
+  "reponse": "```python\ndef test_ordre_croissant():\n    tickets = [{\"priorite\": 3}, {\"priorite\": 1}, {\"priorite\": 2}]\n    assert [t[\"priorite\"] for t in trier_par_priorite(tickets)] == [1, 2, 3]\n\ndef test_liste_vide():\n    assert trier_par_priorite([]) == []\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal trier_par_priorite\n```python\ndef trier_par_priorite(tickets):\n    return sorted(tickets, key=lambda t: t[\"priorite\"])\n```",
+  "reponse": "```python\ndef test_ordre_croissant():\n    tickets = [{\"priorite\": 3}, {\"priorite\": 1}, {\"priorite\": 2}]\n    assert [t[\"priorite\"] for t in trier_par_priorite(tickets)] == [1, 2, 3]\n\ndef test_liste_vide():\n    assert trier_par_priorite([]) == []\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait trier_par_priorite.\n```python\ndef trier_par_priorite(tickets):\n    return sorted(tickets, key=lambda t: t[\"priorite\"])\n```",
+  "reponse": "La fonction rend une nouvelle liste des tickets, rangés de la priorité 1 à la priorité 3. La liste d'origine n'est pas modifiée."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction trouver_ticket(tickets, identifiant) qui renvoie le ticket dont l'identifiant est donné, ou None s'il n'existe pas.",
+  "reponse": "```python\ndef trouver_ticket(tickets, identifiant):\n    for t in tickets:\n        if t[\"id\"] == identifiant:\n            return t\n    return None\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python trouver_ticket(tickets, identifiant), elle renvoie le ticket dont l'identifiant est donné, ou None s'il n'existe pas.",
+  "reponse": "```python\ndef trouver_ticket(tickets, identifiant):\n    for t in tickets:\n        if t[\"id\"] == identifiant:\n            return t\n    return None\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de trouver_ticket.\n```python\ndef trouver_ticket(tickets, identifiant):\n    for t in tickets:\n        if t[\"id\"] == identifiant:\n            return t\n    return None\n```",
+  "reponse": "```python\ndef test_ticket_trouve():\n    tickets = [{\"id\": 1}, {\"id\": 7}]\n    assert trouver_ticket(tickets, 7) == {\"id\": 7}\n\ndef test_ticket_absent():\n    assert trouver_ticket([{\"id\": 1}], 5) is None\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal trouver_ticket\n```python\ndef trouver_ticket(tickets, identifiant):\n    for t in tickets:\n        if t[\"id\"] == identifiant:\n            return t\n    return None\n```",
+  "reponse": "```python\ndef test_ticket_trouve():\n    tickets = [{\"id\": 1}, {\"id\": 7}]\n    assert trouver_ticket(tickets, 7) == {\"id\": 7}\n\ndef test_ticket_absent():\n    assert trouver_ticket([{\"id\": 1}], 5) is None\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait trouver_ticket.\n```python\ndef trouver_ticket(tickets, identifiant):\n    for t in tickets:\n        if t[\"id\"] == identifiant:\n            return t\n    return None\n```",
+  "reponse": "La fonction cherche dans la liste le ticket qui porte l'identifiant donné et le renvoie. Si aucun ticket ne correspond, elle renvoie None."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction fermer_ticket(ticket) qui ferme le ticket en mettant son statut à \"ferme\" et le renvoie.",
+  "reponse": "```python\ndef fermer_ticket(ticket):\n    ticket[\"statut\"] = \"ferme\"\n    return ticket\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python fermer_ticket(ticket), elle ferme le ticket en mettant son statut à \"ferme\" et le renvoie.",
+  "reponse": "```python\ndef fermer_ticket(ticket):\n    ticket[\"statut\"] = \"ferme\"\n    return ticket\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de fermer_ticket.\n```python\ndef fermer_ticket(ticket):\n    ticket[\"statut\"] = \"ferme\"\n    return ticket\n```",
+  "reponse": "```python\ndef test_statut_ferme():\n    assert fermer_ticket({\"statut\": \"ouvert\"})[\"statut\"] == \"ferme\"\n\ndef test_autres_champs_gardes():\n    ticket = fermer_ticket({\"statut\": \"ouvert\", \"titre\": \"Bug\"})\n    assert ticket[\"titre\"] == \"Bug\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal fermer_ticket\n```python\ndef fermer_ticket(ticket):\n    ticket[\"statut\"] = \"ferme\"\n    return ticket\n```",
+  "reponse": "```python\ndef test_statut_ferme():\n    assert fermer_ticket({\"statut\": \"ouvert\"})[\"statut\"] == \"ferme\"\n\ndef test_autres_champs_gardes():\n    ticket = fermer_ticket({\"statut\": \"ouvert\", \"titre\": \"Bug\"})\n    assert ticket[\"titre\"] == \"Bug\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait fermer_ticket.\n```python\ndef fermer_ticket(ticket):\n    ticket[\"statut\"] = \"ferme\"\n    return ticket\n```",
+  "reponse": "La fonction passe le statut du ticket à \"ferme\" et renvoie le même ticket. Les autres champs ne changent pas."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction email_valide(adresse) qui renvoie True si l'adresse contient un seul @ avec du texte avant et après.",
+  "reponse": "```python\ndef email_valide(adresse):\n    parties = adresse.split(\"@\")\n    return len(parties) == 2 and parties[0] != \"\" and parties[1] != \"\"\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python email_valide(adresse), elle renvoie True si l'adresse contient un seul @ avec du texte avant et après.",
+  "reponse": "```python\ndef email_valide(adresse):\n    parties = adresse.split(\"@\")\n    return len(parties) == 2 and parties[0] != \"\" and parties[1] != \"\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de email_valide.\n```python\ndef email_valide(adresse):\n    parties = adresse.split(\"@\")\n    return len(parties) == 2 and parties[0] != \"\" and parties[1] != \"\"\n```",
+  "reponse": "```python\ndef test_adresse_correcte():\n    assert email_valide(\"sara@ilia.ma\")\n\ndef test_sans_arobase():\n    assert not email_valide(\"sara.ilia.ma\")\n\ndef test_deux_arobases():\n    assert not email_valide(\"sara@@ilia.ma\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal email_valide\n```python\ndef email_valide(adresse):\n    parties = adresse.split(\"@\")\n    return len(parties) == 2 and parties[0] != \"\" and parties[1] != \"\"\n```",
+  "reponse": "```python\ndef test_adresse_correcte():\n    assert email_valide(\"sara@ilia.ma\")\n\ndef test_sans_arobase():\n    assert not email_valide(\"sara.ilia.ma\")\n\ndef test_deux_arobases():\n    assert not email_valide(\"sara@@ilia.ma\")\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait email_valide.\n```python\ndef email_valide(adresse):\n    parties = adresse.split(\"@\")\n    return len(parties) == 2 and parties[0] != \"\" and parties[1] != \"\"\n```",
+  "reponse": "La fonction coupe l'adresse sur le caractère @. L'adresse est valide s'il y a exactement deux morceaux, tous deux non vides."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction normaliser_nom(nom) qui renvoie le nom d'utilisateur en minuscules, sans espaces, avec des points à la place des espaces intérieurs.",
+  "reponse": "```python\ndef normaliser_nom(nom):\n    return \".\".join(nom.lower().split())\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python normaliser_nom(nom), elle renvoie le nom d'utilisateur en minuscules, sans espaces, avec des points à la place des espaces intérieurs.",
+  "reponse": "```python\ndef normaliser_nom(nom):\n    return \".\".join(nom.lower().split())\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de normaliser_nom.\n```python\ndef normaliser_nom(nom):\n    return \".\".join(nom.lower().split())\n```",
+  "reponse": "```python\ndef test_nom_compose():\n    assert normaliser_nom(\"Sara  El Amrani\") == \"sara.el.amrani\"\n\ndef test_nom_simple():\n    assert normaliser_nom(\" Youssef \") == \"youssef\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal normaliser_nom\n```python\ndef normaliser_nom(nom):\n    return \".\".join(nom.lower().split())\n```",
+  "reponse": "```python\ndef test_nom_compose():\n    assert normaliser_nom(\"Sara  El Amrani\") == \"sara.el.amrani\"\n\ndef test_nom_simple():\n    assert normaliser_nom(\" Youssef \") == \"youssef\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait normaliser_nom.\n```python\ndef normaliser_nom(nom):\n    return \".\".join(nom.lower().split())\n```",
+  "reponse": "La fonction met le nom en minuscules, le découpe sur les espaces, puis recolle les morceaux avec des points. Les espaces en trop disparaissent."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction mot_de_passe_valide(mot) qui renvoie True si le mot de passe a au moins 8 caractères et contient au moins un chiffre.",
+  "reponse": "```python\ndef mot_de_passe_valide(mot):\n    return len(mot) >= 8 and any(c.isdigit() for c in mot)\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python mot_de_passe_valide(mot), elle renvoie True si le mot de passe a au moins 8 caractères et contient au moins un chiffre.",
+  "reponse": "```python\ndef mot_de_passe_valide(mot):\n    return len(mot) >= 8 and any(c.isdigit() for c in mot)\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de mot_de_passe_valide.\n```python\ndef mot_de_passe_valide(mot):\n    return len(mot) >= 8 and any(c.isdigit() for c in mot)\n```",
+  "reponse": "```python\ndef test_mot_correct():\n    assert mot_de_passe_valide(\"ilia2026x\")\n\ndef test_trop_court():\n    assert not mot_de_passe_valide(\"a1b2\")\n\ndef test_sans_chiffre():\n    assert not mot_de_passe_valide(\"motdepasse\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal mot_de_passe_valide\n```python\ndef mot_de_passe_valide(mot):\n    return len(mot) >= 8 and any(c.isdigit() for c in mot)\n```",
+  "reponse": "```python\ndef test_mot_correct():\n    assert mot_de_passe_valide(\"ilia2026x\")\n\ndef test_trop_court():\n    assert not mot_de_passe_valide(\"a1b2\")\n\ndef test_sans_chiffre():\n    assert not mot_de_passe_valide(\"motdepasse\")\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait mot_de_passe_valide.\n```python\ndef mot_de_passe_valide(mot):\n    return len(mot) >= 8 and any(c.isdigit() for c in mot)\n```",
+  "reponse": "La fonction accepte le mot de passe s'il fait au moins 8 caractères et contient au moins un chiffre. Sinon elle le refuse."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction jours_entre(debut, fin) qui renvoie le nombre de jours entiers entre deux dates au format AAAA-MM-JJ.",
+  "reponse": "```python\nfrom datetime import date\n\ndef jours_entre(debut, fin):\n    return (date.fromisoformat(fin) - date.fromisoformat(debut)).days\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python jours_entre(debut, fin), elle renvoie le nombre de jours entiers entre deux dates au format AAAA-MM-JJ.",
+  "reponse": "```python\nfrom datetime import date\n\ndef jours_entre(debut, fin):\n    return (date.fromisoformat(fin) - date.fromisoformat(debut)).days\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de jours_entre.\n```python\nfrom datetime import date\n\ndef jours_entre(debut, fin):\n    return (date.fromisoformat(fin) - date.fromisoformat(debut)).days\n```",
+  "reponse": "```python\ndef test_meme_mois():\n    assert jours_entre(\"2026-11-01\", \"2026-11-16\") == 15\n\ndef test_changement_d_annee():\n    assert jours_entre(\"2026-12-31\", \"2027-01-01\") == 1\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal jours_entre\n```python\nfrom datetime import date\n\ndef jours_entre(debut, fin):\n    return (date.fromisoformat(fin) - date.fromisoformat(debut)).days\n```",
+  "reponse": "```python\ndef test_meme_mois():\n    assert jours_entre(\"2026-11-01\", \"2026-11-16\") == 15\n\ndef test_changement_d_annee():\n    assert jours_entre(\"2026-12-31\", \"2027-01-01\") == 1\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait jours_entre.\n```python\nfrom datetime import date\n\ndef jours_entre(debut, fin):\n    return (date.fromisoformat(fin) - date.fromisoformat(debut)).days\n```",
+  "reponse": "La fonction lit les deux dates au format AAAA-MM-JJ, les soustrait, et renvoie l'écart en jours. Le résultat est négatif si la fin précède le début."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction en_retard(ouverture, aujourd_hui) qui renvoie True si un ticket ouvert depuis plus de 7 jours est en retard, à partir de sa date d'ouverture et de la date du jour au format AAAA-MM-JJ.",
+  "reponse": "```python\nfrom datetime import date\n\ndef en_retard(ouverture, aujourd_hui):\n    return (date.fromisoformat(aujourd_hui) - date.fromisoformat(ouverture)).days > 7\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python en_retard(ouverture, aujourd_hui), elle renvoie True si un ticket ouvert depuis plus de 7 jours est en retard, à partir de sa date d'ouverture et de la date du jour au format AAAA-MM-JJ.",
+  "reponse": "```python\nfrom datetime import date\n\ndef en_retard(ouverture, aujourd_hui):\n    return (date.fromisoformat(aujourd_hui) - date.fromisoformat(ouverture)).days > 7\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de en_retard.\n```python\nfrom datetime import date\n\ndef en_retard(ouverture, aujourd_hui):\n    return (date.fromisoformat(aujourd_hui) - date.fromisoformat(ouverture)).days > 7\n```",
+  "reponse": "```python\ndef test_ticket_recent():\n    assert not en_retard(\"2026-11-10\", \"2026-11-16\")\n\ndef test_ticket_ancien():\n    assert en_retard(\"2026-11-01\", \"2026-11-16\")\n\ndef test_exactement_sept_jours():\n    assert not en_retard(\"2026-11-09\", \"2026-11-16\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal en_retard\n```python\nfrom datetime import date\n\ndef en_retard(ouverture, aujourd_hui):\n    return (date.fromisoformat(aujourd_hui) - date.fromisoformat(ouverture)).days > 7\n```",
+  "reponse": "```python\ndef test_ticket_recent():\n    assert not en_retard(\"2026-11-10\", \"2026-11-16\")\n\ndef test_ticket_ancien():\n    assert en_retard(\"2026-11-01\", \"2026-11-16\")\n\ndef test_exactement_sept_jours():\n    assert not en_retard(\"2026-11-09\", \"2026-11-16\")\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait en_retard.\n```python\nfrom datetime import date\n\ndef en_retard(ouverture, aujourd_hui):\n    return (date.fromisoformat(aujourd_hui) - date.fromisoformat(ouverture)).days > 7\n```",
+  "reponse": "La fonction calcule le nombre de jours depuis l'ouverture du ticket. Le ticket est en retard au-delà de 7 jours, exactement 7 jours ne suffit pas."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction libelle_priorite(priorite) qui renvoie le libellé de la priorité, \"haute\" pour 1, \"moyenne\" pour 2 et \"basse\" pour 3.",
+  "reponse": "```python\ndef libelle_priorite(priorite):\n    return {1: \"haute\", 2: \"moyenne\", 3: \"basse\"}[priorite]\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python libelle_priorite(priorite), elle renvoie le libellé de la priorité, \"haute\" pour 1, \"moyenne\" pour 2 et \"basse\" pour 3.",
+  "reponse": "```python\ndef libelle_priorite(priorite):\n    return {1: \"haute\", 2: \"moyenne\", 3: \"basse\"}[priorite]\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de libelle_priorite.\n```python\ndef libelle_priorite(priorite):\n    return {1: \"haute\", 2: \"moyenne\", 3: \"basse\"}[priorite]\n```",
+  "reponse": "```python\ndef test_trois_libelles():\n    assert [libelle_priorite(p) for p in (1, 2, 3)] == [\"haute\", \"moyenne\", \"basse\"]\n\ndef test_priorite_inconnue():\n    import pytest\n    with pytest.raises(KeyError):\n        libelle_priorite(4)\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal libelle_priorite\n```python\ndef libelle_priorite(priorite):\n    return {1: \"haute\", 2: \"moyenne\", 3: \"basse\"}[priorite]\n```",
+  "reponse": "```python\ndef test_trois_libelles():\n    assert [libelle_priorite(p) for p in (1, 2, 3)] == [\"haute\", \"moyenne\", \"basse\"]\n\ndef test_priorite_inconnue():\n    import pytest\n    with pytest.raises(KeyError):\n        libelle_priorite(4)\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait libelle_priorite.\n```python\ndef libelle_priorite(priorite):\n    return {1: \"haute\", 2: \"moyenne\", 3: \"basse\"}[priorite]\n```",
+  "reponse": "La fonction traduit la priorité en mot grâce à un dictionnaire. Une priorité inconnue lève une erreur KeyError."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction grouper_par_statut(tickets) qui regroupe les tickets par statut dans un dictionnaire qui associe chaque statut à la liste de ses tickets.",
+  "reponse": "```python\ndef grouper_par_statut(tickets):\n    groupes = {}\n    for t in tickets:\n        groupes.setdefault(t[\"statut\"], []).append(t)\n    return groupes\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python grouper_par_statut(tickets), elle regroupe les tickets par statut dans un dictionnaire qui associe chaque statut à la liste de ses tickets.",
+  "reponse": "```python\ndef grouper_par_statut(tickets):\n    groupes = {}\n    for t in tickets:\n        groupes.setdefault(t[\"statut\"], []).append(t)\n    return groupes\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de grouper_par_statut.\n```python\ndef grouper_par_statut(tickets):\n    groupes = {}\n    for t in tickets:\n        groupes.setdefault(t[\"statut\"], []).append(t)\n    return groupes\n```",
+  "reponse": "```python\ndef test_deux_statuts():\n    a, b, c = {\"statut\": \"ouvert\"}, {\"statut\": \"ferme\"}, {\"statut\": \"ouvert\"}\n    assert grouper_par_statut([a, b, c]) == {\"ouvert\": [a, c], \"ferme\": [b]}\n\ndef test_liste_vide():\n    assert grouper_par_statut([]) == {}\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal grouper_par_statut\n```python\ndef grouper_par_statut(tickets):\n    groupes = {}\n    for t in tickets:\n        groupes.setdefault(t[\"statut\"], []).append(t)\n    return groupes\n```",
+  "reponse": "```python\ndef test_deux_statuts():\n    a, b, c = {\"statut\": \"ouvert\"}, {\"statut\": \"ferme\"}, {\"statut\": \"ouvert\"}\n    assert grouper_par_statut([a, b, c]) == {\"ouvert\": [a, c], \"ferme\": [b]}\n\ndef test_liste_vide():\n    assert grouper_par_statut([]) == {}\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait grouper_par_statut.\n```python\ndef grouper_par_statut(tickets):\n    groupes = {}\n    for t in tickets:\n        groupes.setdefault(t[\"statut\"], []).append(t)\n    return groupes\n```",
+  "reponse": "La fonction range chaque ticket dans la liste de son statut. Elle renvoie un dictionnaire dont les clés sont les statuts rencontrés."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction resumer_titre(titre) qui renvoie le titre coupé à 30 caractères, suivi de trois points s'il était plus long.",
+  "reponse": "```python\ndef resumer_titre(titre):\n    if len(titre) <= 30:\n        return titre\n    return titre[:30] + \"...\"\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python resumer_titre(titre), elle renvoie le titre coupé à 30 caractères, suivi de trois points s'il était plus long.",
+  "reponse": "```python\ndef resumer_titre(titre):\n    if len(titre) <= 30:\n        return titre\n    return titre[:30] + \"...\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de resumer_titre.\n```python\ndef resumer_titre(titre):\n    if len(titre) <= 30:\n        return titre\n    return titre[:30] + \"...\"\n```",
+  "reponse": "```python\ndef test_titre_court():\n    assert resumer_titre(\"Bug login\") == \"Bug login\"\n\ndef test_titre_long():\n    assert resumer_titre(\"a\" * 40) == \"a\" * 30 + \"...\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal resumer_titre\n```python\ndef resumer_titre(titre):\n    if len(titre) <= 30:\n        return titre\n    return titre[:30] + \"...\"\n```",
+  "reponse": "```python\ndef test_titre_court():\n    assert resumer_titre(\"Bug login\") == \"Bug login\"\n\ndef test_titre_long():\n    assert resumer_titre(\"a\" * 40) == \"a\" * 30 + \"...\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait resumer_titre.\n```python\ndef resumer_titre(titre):\n    if len(titre) <= 30:\n        return titre\n    return titre[:30] + \"...\"\n```",
+  "reponse": "La fonction laisse un titre court tel quel. Au-delà de 30 caractères, elle garde les 30 premiers et ajoute trois points."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction tickets_de(tickets, utilisateur) qui renvoie la liste des tickets assignés à l'utilisateur donné.",
+  "reponse": "```python\ndef tickets_de(tickets, utilisateur):\n    return [t for t in tickets if t[\"assigne\"] == utilisateur]\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python tickets_de(tickets, utilisateur), elle renvoie la liste des tickets assignés à l'utilisateur donné.",
+  "reponse": "```python\ndef tickets_de(tickets, utilisateur):\n    return [t for t in tickets if t[\"assigne\"] == utilisateur]\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de tickets_de.\n```python\ndef tickets_de(tickets, utilisateur):\n    return [t for t in tickets if t[\"assigne\"] == utilisateur]\n```",
+  "reponse": "```python\ndef test_filtre_utilisateur():\n    tickets = [{\"assigne\": \"sara\"}, {\"assigne\": \"omar\"}, {\"assigne\": \"sara\"}]\n    assert len(tickets_de(tickets, \"sara\")) == 2\n\ndef test_utilisateur_sans_ticket():\n    assert tickets_de([{\"assigne\": \"omar\"}], \"sara\") == []\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal tickets_de\n```python\ndef tickets_de(tickets, utilisateur):\n    return [t for t in tickets if t[\"assigne\"] == utilisateur]\n```",
+  "reponse": "```python\ndef test_filtre_utilisateur():\n    tickets = [{\"assigne\": \"sara\"}, {\"assigne\": \"omar\"}, {\"assigne\": \"sara\"}]\n    assert len(tickets_de(tickets, \"sara\")) == 2\n\ndef test_utilisateur_sans_ticket():\n    assert tickets_de([{\"assigne\": \"omar\"}], \"sara\") == []\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait tickets_de.\n```python\ndef tickets_de(tickets, utilisateur):\n    return [t for t in tickets if t[\"assigne\"] == utilisateur]\n```",
+  "reponse": "La fonction garde seulement les tickets dont le champ assigne vaut l'utilisateur donné. Elle renvoie une liste vide s'il n'en a aucun."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction prochain_identifiant(tickets) qui renvoie l'identifiant suivant, égal au plus grand identifiant de la liste plus un, ou 1 si la liste est vide.",
+  "reponse": "```python\ndef prochain_identifiant(tickets):\n    if not tickets:\n        return 1\n    return max(t[\"id\"] for t in tickets) + 1\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python prochain_identifiant(tickets), elle renvoie l'identifiant suivant, égal au plus grand identifiant de la liste plus un, ou 1 si la liste est vide.",
+  "reponse": "```python\ndef prochain_identifiant(tickets):\n    if not tickets:\n        return 1\n    return max(t[\"id\"] for t in tickets) + 1\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de prochain_identifiant.\n```python\ndef prochain_identifiant(tickets):\n    if not tickets:\n        return 1\n    return max(t[\"id\"] for t in tickets) + 1\n```",
+  "reponse": "```python\ndef test_liste_vide():\n    assert prochain_identifiant([]) == 1\n\ndef test_apres_le_plus_grand():\n    assert prochain_identifiant([{\"id\": 3}, {\"id\": 9}, {\"id\": 4}]) == 10\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal prochain_identifiant\n```python\ndef prochain_identifiant(tickets):\n    if not tickets:\n        return 1\n    return max(t[\"id\"] for t in tickets) + 1\n```",
+  "reponse": "```python\ndef test_liste_vide():\n    assert prochain_identifiant([]) == 1\n\ndef test_apres_le_plus_grand():\n    assert prochain_identifiant([{\"id\": 3}, {\"id\": 9}, {\"id\": 4}]) == 10\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait prochain_identifiant.\n```python\ndef prochain_identifiant(tickets):\n    if not tickets:\n        return 1\n    return max(t[\"id\"] for t in tickets) + 1\n```",
+  "reponse": "La fonction renvoie 1 pour une liste vide. Sinon elle prend le plus grand identifiant existant et lui ajoute un."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction creer_ticket(identifiant, titre, priorite) qui crée un nouveau ticket sous forme de dictionnaire avec un titre, une priorité et le statut \"ouvert\".",
+  "reponse": "```python\ndef creer_ticket(identifiant, titre, priorite):\n    return {\"id\": identifiant, \"titre\": titre, \"priorite\": priorite, \"statut\": \"ouvert\"}\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python creer_ticket(identifiant, titre, priorite), elle crée un nouveau ticket sous forme de dictionnaire avec un titre, une priorité et le statut \"ouvert\".",
+  "reponse": "```python\ndef creer_ticket(identifiant, titre, priorite):\n    return {\"id\": identifiant, \"titre\": titre, \"priorite\": priorite, \"statut\": \"ouvert\"}\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de creer_ticket.\n```python\ndef creer_ticket(identifiant, titre, priorite):\n    return {\"id\": identifiant, \"titre\": titre, \"priorite\": priorite, \"statut\": \"ouvert\"}\n```",
+  "reponse": "```python\ndef test_champs_du_ticket():\n    t = creer_ticket(1, \"Bug login\", 2)\n    assert t == {\"id\": 1, \"titre\": \"Bug login\", \"priorite\": 2, \"statut\": \"ouvert\"}\n\ndef test_statut_initial():\n    assert creer_ticket(5, \"Lenteur\", 3)[\"statut\"] == \"ouvert\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal creer_ticket\n```python\ndef creer_ticket(identifiant, titre, priorite):\n    return {\"id\": identifiant, \"titre\": titre, \"priorite\": priorite, \"statut\": \"ouvert\"}\n```",
+  "reponse": "```python\ndef test_champs_du_ticket():\n    t = creer_ticket(1, \"Bug login\", 2)\n    assert t == {\"id\": 1, \"titre\": \"Bug login\", \"priorite\": 2, \"statut\": \"ouvert\"}\n\ndef test_statut_initial():\n    assert creer_ticket(5, \"Lenteur\", 3)[\"statut\"] == \"ouvert\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait creer_ticket.\n```python\ndef creer_ticket(identifiant, titre, priorite):\n    return {\"id\": identifiant, \"titre\": titre, \"priorite\": priorite, \"statut\": \"ouvert\"}\n```",
+  "reponse": "La fonction fabrique le dictionnaire d'un nouveau ticket. Son statut de départ est toujours \"ouvert\"."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction taux_fermeture(tickets) qui renvoie le pourcentage de tickets fermés, arrondi à l'entier, ou 0 si la liste est vide.",
+  "reponse": "```python\ndef taux_fermeture(tickets):\n    if not tickets:\n        return 0\n    fermes = sum(1 for t in tickets if t[\"statut\"] == \"ferme\")\n    return round(100 * fermes / len(tickets))\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python taux_fermeture(tickets), elle renvoie le pourcentage de tickets fermés, arrondi à l'entier, ou 0 si la liste est vide.",
+  "reponse": "```python\ndef taux_fermeture(tickets):\n    if not tickets:\n        return 0\n    fermes = sum(1 for t in tickets if t[\"statut\"] == \"ferme\")\n    return round(100 * fermes / len(tickets))\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de taux_fermeture.\n```python\ndef taux_fermeture(tickets):\n    if not tickets:\n        return 0\n    fermes = sum(1 for t in tickets if t[\"statut\"] == \"ferme\")\n    return round(100 * fermes / len(tickets))\n```",
+  "reponse": "```python\ndef test_liste_vide():\n    assert taux_fermeture([]) == 0\n\ndef test_un_sur_trois():\n    tickets = [{\"statut\": \"ferme\"}, {\"statut\": \"ouvert\"}, {\"statut\": \"ouvert\"}]\n    assert taux_fermeture(tickets) == 33\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal taux_fermeture\n```python\ndef taux_fermeture(tickets):\n    if not tickets:\n        return 0\n    fermes = sum(1 for t in tickets if t[\"statut\"] == \"ferme\")\n    return round(100 * fermes / len(tickets))\n```",
+  "reponse": "```python\ndef test_liste_vide():\n    assert taux_fermeture([]) == 0\n\ndef test_un_sur_trois():\n    tickets = [{\"statut\": \"ferme\"}, {\"statut\": \"ouvert\"}, {\"statut\": \"ouvert\"}]\n    assert taux_fermeture(tickets) == 33\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait taux_fermeture.\n```python\ndef taux_fermeture(tickets):\n    if not tickets:\n        return 0\n    fermes = sum(1 for t in tickets if t[\"statut\"] == \"ferme\")\n    return round(100 * fermes / len(tickets))\n```",
+  "reponse": "La fonction compte les tickets fermés, divise par le nombre total, et rend un pourcentage arrondi. Une liste vide donne 0 pour éviter une division par zéro."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction contient_mot(titre, mot) qui renvoie True si le titre contient le mot-clé, sans tenir compte des majuscules.",
+  "reponse": "```python\ndef contient_mot(titre, mot):\n    return mot.lower() in titre.lower()\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python contient_mot(titre, mot), elle renvoie True si le titre contient le mot-clé, sans tenir compte des majuscules.",
+  "reponse": "```python\ndef contient_mot(titre, mot):\n    return mot.lower() in titre.lower()\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de contient_mot.\n```python\ndef contient_mot(titre, mot):\n    return mot.lower() in titre.lower()\n```",
+  "reponse": "```python\ndef test_majuscules_ignorees():\n    assert contient_mot(\"Bug LOGIN page\", \"login\")\n\ndef test_mot_absent():\n    assert not contient_mot(\"Lenteur\", \"login\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal contient_mot\n```python\ndef contient_mot(titre, mot):\n    return mot.lower() in titre.lower()\n```",
+  "reponse": "```python\ndef test_majuscules_ignorees():\n    assert contient_mot(\"Bug LOGIN page\", \"login\")\n\ndef test_mot_absent():\n    assert not contient_mot(\"Lenteur\", \"login\")\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait contient_mot.\n```python\ndef contient_mot(titre, mot):\n    return mot.lower() in titre.lower()\n```",
+  "reponse": "La fonction met le titre et le mot-clé en minuscules, puis vérifie que le mot apparaît dans le titre."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction rechercher(tickets, mot) qui renvoie les tickets dont le titre contient le mot-clé, sans tenir compte des majuscules.",
+  "reponse": "```python\ndef rechercher(tickets, mot):\n    return [t for t in tickets if mot.lower() in t[\"titre\"].lower()]\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python rechercher(tickets, mot), elle renvoie les tickets dont le titre contient le mot-clé, sans tenir compte des majuscules.",
+  "reponse": "```python\ndef rechercher(tickets, mot):\n    return [t for t in tickets if mot.lower() in t[\"titre\"].lower()]\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de rechercher.\n```python\ndef rechercher(tickets, mot):\n    return [t for t in tickets if mot.lower() in t[\"titre\"].lower()]\n```",
+  "reponse": "```python\ndef test_recherche():\n    tickets = [{\"titre\": \"Bug login\"}, {\"titre\": \"Lenteur\"}, {\"titre\": \"LOGIN bloqué\"}]\n    assert len(rechercher(tickets, \"login\")) == 2\n\ndef test_aucun_resultat():\n    assert rechercher([{\"titre\": \"Lenteur\"}], \"export\") == []\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal rechercher\n```python\ndef rechercher(tickets, mot):\n    return [t for t in tickets if mot.lower() in t[\"titre\"].lower()]\n```",
+  "reponse": "```python\ndef test_recherche():\n    tickets = [{\"titre\": \"Bug login\"}, {\"titre\": \"Lenteur\"}, {\"titre\": \"LOGIN bloqué\"}]\n    assert len(rechercher(tickets, \"login\")) == 2\n\ndef test_aucun_resultat():\n    assert rechercher([{\"titre\": \"Lenteur\"}], \"export\") == []\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait rechercher.\n```python\ndef rechercher(tickets, mot):\n    return [t for t in tickets if mot.lower() in t[\"titre\"].lower()]\n```",
+  "reponse": "La fonction garde les tickets dont le titre contient le mot cherché, en ignorant la casse."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction changer_priorite(ticket, priorite) qui change la priorité du ticket si la nouvelle valeur est entre 1 et 3, et lève ValueError sinon.",
+  "reponse": "```python\ndef changer_priorite(ticket, priorite):\n    if not 1 <= priorite <= 3:\n        raise ValueError(\"priorité hors de 1 à 3\")\n    ticket[\"priorite\"] = priorite\n    return ticket\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python changer_priorite(ticket, priorite), elle change la priorité du ticket si la nouvelle valeur est entre 1 et 3, et lève ValueError sinon.",
+  "reponse": "```python\ndef changer_priorite(ticket, priorite):\n    if not 1 <= priorite <= 3:\n        raise ValueError(\"priorité hors de 1 à 3\")\n    ticket[\"priorite\"] = priorite\n    return ticket\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de changer_priorite.\n```python\ndef changer_priorite(ticket, priorite):\n    if not 1 <= priorite <= 3:\n        raise ValueError(\"priorité hors de 1 à 3\")\n    ticket[\"priorite\"] = priorite\n    return ticket\n```",
+  "reponse": "```python\nimport pytest\n\ndef test_changement_accepte():\n    assert changer_priorite({\"priorite\": 3}, 1)[\"priorite\"] == 1\n\ndef test_valeur_refusee():\n    with pytest.raises(ValueError):\n        changer_priorite({\"priorite\": 3}, 5)\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal changer_priorite\n```python\ndef changer_priorite(ticket, priorite):\n    if not 1 <= priorite <= 3:\n        raise ValueError(\"priorité hors de 1 à 3\")\n    ticket[\"priorite\"] = priorite\n    return ticket\n```",
+  "reponse": "```python\nimport pytest\n\ndef test_changement_accepte():\n    assert changer_priorite({\"priorite\": 3}, 1)[\"priorite\"] == 1\n\ndef test_valeur_refusee():\n    with pytest.raises(ValueError):\n        changer_priorite({\"priorite\": 3}, 5)\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait changer_priorite.\n```python\ndef changer_priorite(ticket, priorite):\n    if not 1 <= priorite <= 3:\n        raise ValueError(\"priorité hors de 1 à 3\")\n    ticket[\"priorite\"] = priorite\n    return ticket\n```",
+  "reponse": "La fonction remplace la priorité du ticket si elle est entre 1 et 3. Sinon elle lève une ValueError et ne touche pas au ticket."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction formater_commentaire(auteur, date, texte) qui renvoie le texte d'un commentaire sous la forme \"auteur, date, texte\".",
+  "reponse": "```python\ndef formater_commentaire(auteur, date, texte):\n    return f\"{auteur}, {date}, {texte}\"\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python formater_commentaire(auteur, date, texte), elle renvoie le texte d'un commentaire sous la forme \"auteur, date, texte\".",
+  "reponse": "```python\ndef formater_commentaire(auteur, date, texte):\n    return f\"{auteur}, {date}, {texte}\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de formater_commentaire.\n```python\ndef formater_commentaire(auteur, date, texte):\n    return f\"{auteur}, {date}, {texte}\"\n```",
+  "reponse": "```python\ndef test_format():\n    assert formater_commentaire(\"sara\", \"2026-11-16\", \"corrigé\") == \"sara, 2026-11-16, corrigé\"\n\ndef test_texte_vide():\n    assert formater_commentaire(\"omar\", \"2026-11-01\", \"\") == \"omar, 2026-11-01, \"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal formater_commentaire\n```python\ndef formater_commentaire(auteur, date, texte):\n    return f\"{auteur}, {date}, {texte}\"\n```",
+  "reponse": "```python\ndef test_format():\n    assert formater_commentaire(\"sara\", \"2026-11-16\", \"corrigé\") == \"sara, 2026-11-16, corrigé\"\n\ndef test_texte_vide():\n    assert formater_commentaire(\"omar\", \"2026-11-01\", \"\") == \"omar, 2026-11-01, \"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait formater_commentaire.\n```python\ndef formater_commentaire(auteur, date, texte):\n    return f\"{auteur}, {date}, {texte}\"\n```",
+  "reponse": "La fonction assemble l'auteur, la date et le texte en une seule chaîne, séparés par des virgules."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction ajouter_commentaire(ticket, texte) qui ajoute un commentaire à la liste \"commentaires\" du ticket et renvoie le nombre de commentaires.",
+  "reponse": "```python\ndef ajouter_commentaire(ticket, texte):\n    ticket.setdefault(\"commentaires\", []).append(texte)\n    return len(ticket[\"commentaires\"])\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python ajouter_commentaire(ticket, texte), elle ajoute un commentaire à la liste \"commentaires\" du ticket et renvoie le nombre de commentaires.",
+  "reponse": "```python\ndef ajouter_commentaire(ticket, texte):\n    ticket.setdefault(\"commentaires\", []).append(texte)\n    return len(ticket[\"commentaires\"])\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de ajouter_commentaire.\n```python\ndef ajouter_commentaire(ticket, texte):\n    ticket.setdefault(\"commentaires\", []).append(texte)\n    return len(ticket[\"commentaires\"])\n```",
+  "reponse": "```python\ndef test_premier_commentaire():\n    ticket = {}\n    assert ajouter_commentaire(ticket, \"vu\") == 1\n    assert ticket[\"commentaires\"] == [\"vu\"]\n\ndef test_deuxieme_commentaire():\n    ticket = {\"commentaires\": [\"vu\"]}\n    assert ajouter_commentaire(ticket, \"corrigé\") == 2\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal ajouter_commentaire\n```python\ndef ajouter_commentaire(ticket, texte):\n    ticket.setdefault(\"commentaires\", []).append(texte)\n    return len(ticket[\"commentaires\"])\n```",
+  "reponse": "```python\ndef test_premier_commentaire():\n    ticket = {}\n    assert ajouter_commentaire(ticket, \"vu\") == 1\n    assert ticket[\"commentaires\"] == [\"vu\"]\n\ndef test_deuxieme_commentaire():\n    ticket = {\"commentaires\": [\"vu\"]}\n    assert ajouter_commentaire(ticket, \"corrigé\") == 2\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait ajouter_commentaire.\n```python\ndef ajouter_commentaire(ticket, texte):\n    ticket.setdefault(\"commentaires\", []).append(texte)\n    return len(ticket[\"commentaires\"])\n```",
+  "reponse": "La fonction crée la liste des commentaires si elle n'existe pas, y ajoute le texte, et renvoie le nombre de commentaires du ticket."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction est_admin(utilisateur) qui renvoie True si l'utilisateur a le rôle \"admin\".",
+  "reponse": "```python\ndef est_admin(utilisateur):\n    return utilisateur.get(\"role\") == \"admin\"\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python est_admin(utilisateur), elle renvoie True si l'utilisateur a le rôle \"admin\".",
+  "reponse": "```python\ndef est_admin(utilisateur):\n    return utilisateur.get(\"role\") == \"admin\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de est_admin.\n```python\ndef est_admin(utilisateur):\n    return utilisateur.get(\"role\") == \"admin\"\n```",
+  "reponse": "```python\ndef test_admin():\n    assert est_admin({\"role\": \"admin\"})\n\ndef test_testeur():\n    assert not est_admin({\"role\": \"testeur\"})\n\ndef test_sans_role():\n    assert not est_admin({})\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal est_admin\n```python\ndef est_admin(utilisateur):\n    return utilisateur.get(\"role\") == \"admin\"\n```",
+  "reponse": "```python\ndef test_admin():\n    assert est_admin({\"role\": \"admin\"})\n\ndef test_testeur():\n    assert not est_admin({\"role\": \"testeur\"})\n\ndef test_sans_role():\n    assert not est_admin({})\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait est_admin.\n```python\ndef est_admin(utilisateur):\n    return utilisateur.get(\"role\") == \"admin\"\n```",
+  "reponse": "La fonction lit le rôle de l'utilisateur et renvoie vrai seulement s'il vaut \"admin\". Un utilisateur sans rôle n'est pas administrateur."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction peut_fermer(utilisateur, ticket) qui renvoie True si l'utilisateur peut fermer le ticket, c'est-à-dire s'il est admin ou s'il est la personne assignée.",
+  "reponse": "```python\ndef peut_fermer(utilisateur, ticket):\n    return utilisateur[\"role\"] == \"admin\" or ticket[\"assigne\"] == utilisateur[\"nom\"]\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python peut_fermer(utilisateur, ticket), elle renvoie True si l'utilisateur peut fermer le ticket, c'est-à-dire s'il est admin ou s'il est la personne assignée.",
+  "reponse": "```python\ndef peut_fermer(utilisateur, ticket):\n    return utilisateur[\"role\"] == \"admin\" or ticket[\"assigne\"] == utilisateur[\"nom\"]\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de peut_fermer.\n```python\ndef peut_fermer(utilisateur, ticket):\n    return utilisateur[\"role\"] == \"admin\" or ticket[\"assigne\"] == utilisateur[\"nom\"]\n```",
+  "reponse": "```python\ndef test_admin_peut_fermer():\n    assert peut_fermer({\"nom\": \"omar\", \"role\": \"admin\"}, {\"assigne\": \"sara\"})\n\ndef test_assigne_peut_fermer():\n    assert peut_fermer({\"nom\": \"sara\", \"role\": \"testeur\"}, {\"assigne\": \"sara\"})\n\ndef test_autre_ne_peut_pas():\n    assert not peut_fermer({\"nom\": \"omar\", \"role\": \"testeur\"}, {\"assigne\": \"sara\"})\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal peut_fermer\n```python\ndef peut_fermer(utilisateur, ticket):\n    return utilisateur[\"role\"] == \"admin\" or ticket[\"assigne\"] == utilisateur[\"nom\"]\n```",
+  "reponse": "```python\ndef test_admin_peut_fermer():\n    assert peut_fermer({\"nom\": \"omar\", \"role\": \"admin\"}, {\"assigne\": \"sara\"})\n\ndef test_assigne_peut_fermer():\n    assert peut_fermer({\"nom\": \"sara\", \"role\": \"testeur\"}, {\"assigne\": \"sara\"})\n\ndef test_autre_ne_peut_pas():\n    assert not peut_fermer({\"nom\": \"omar\", \"role\": \"testeur\"}, {\"assigne\": \"sara\"})\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait peut_fermer.\n```python\ndef peut_fermer(utilisateur, ticket):\n    return utilisateur[\"role\"] == \"admin\" or ticket[\"assigne\"] == utilisateur[\"nom\"]\n```",
+  "reponse": "La fonction autorise la fermeture à un administrateur, ou à la personne à qui le ticket est assigné. Tout autre utilisateur est refusé."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction initiales(nom) qui renvoie les initiales d'un nom complet, en majuscules.",
+  "reponse": "```python\ndef initiales(nom):\n    return \"\".join(mot[0].upper() for mot in nom.split())\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python initiales(nom), elle renvoie les initiales d'un nom complet, en majuscules.",
+  "reponse": "```python\ndef initiales(nom):\n    return \"\".join(mot[0].upper() for mot in nom.split())\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de initiales.\n```python\ndef initiales(nom):\n    return \"\".join(mot[0].upper() for mot in nom.split())\n```",
+  "reponse": "```python\ndef test_deux_mots():\n    assert initiales(\"sara el amrani\") == \"SEA\"\n\ndef test_un_mot():\n    assert initiales(\"Youssef\") == \"Y\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal initiales\n```python\ndef initiales(nom):\n    return \"\".join(mot[0].upper() for mot in nom.split())\n```",
+  "reponse": "```python\ndef test_deux_mots():\n    assert initiales(\"sara el amrani\") == \"SEA\"\n\ndef test_un_mot():\n    assert initiales(\"Youssef\") == \"Y\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait initiales.\n```python\ndef initiales(nom):\n    return \"\".join(mot[0].upper() for mot in nom.split())\n```",
+  "reponse": "La fonction prend la première lettre de chaque mot du nom et les colle en majuscules."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction formater_duree(minutes) qui renvoie la durée en heures et minutes, sous la forme \"2h05\", à partir d'un nombre de minutes.",
+  "reponse": "```python\ndef formater_duree(minutes):\n    return f\"{minutes // 60}h{minutes % 60:02d}\"\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python formater_duree(minutes), elle renvoie la durée en heures et minutes, sous la forme \"2h05\", à partir d'un nombre de minutes.",
+  "reponse": "```python\ndef formater_duree(minutes):\n    return f\"{minutes // 60}h{minutes % 60:02d}\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de formater_duree.\n```python\ndef formater_duree(minutes):\n    return f\"{minutes // 60}h{minutes % 60:02d}\"\n```",
+  "reponse": "```python\ndef test_plus_d_une_heure():\n    assert formater_duree(125) == \"2h05\"\n\ndef test_moins_d_une_heure():\n    assert formater_duree(45) == \"0h45\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal formater_duree\n```python\ndef formater_duree(minutes):\n    return f\"{minutes // 60}h{minutes % 60:02d}\"\n```",
+  "reponse": "```python\ndef test_plus_d_une_heure():\n    assert formater_duree(125) == \"2h05\"\n\ndef test_moins_d_une_heure():\n    assert formater_duree(45) == \"0h45\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait formater_duree.\n```python\ndef formater_duree(minutes):\n    return f\"{minutes // 60}h{minutes % 60:02d}\"\n```",
+  "reponse": "La fonction divise les minutes par 60 pour les heures, garde le reste pour les minutes, et écrit toujours les minutes sur deux chiffres."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction duree_moyenne(durees) qui renvoie la moyenne des durées de résolution en minutes, ou 0 si la liste est vide.",
+  "reponse": "```python\ndef duree_moyenne(durees):\n    if not durees:\n        return 0\n    return sum(durees) / len(durees)\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python duree_moyenne(durees), elle renvoie la moyenne des durées de résolution en minutes, ou 0 si la liste est vide.",
+  "reponse": "```python\ndef duree_moyenne(durees):\n    if not durees:\n        return 0\n    return sum(durees) / len(durees)\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de duree_moyenne.\n```python\ndef duree_moyenne(durees):\n    if not durees:\n        return 0\n    return sum(durees) / len(durees)\n```",
+  "reponse": "```python\ndef test_liste_vide():\n    assert duree_moyenne([]) == 0\n\ndef test_moyenne():\n    assert duree_moyenne([30, 60, 90]) == 60\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal duree_moyenne\n```python\ndef duree_moyenne(durees):\n    if not durees:\n        return 0\n    return sum(durees) / len(durees)\n```",
+  "reponse": "```python\ndef test_liste_vide():\n    assert duree_moyenne([]) == 0\n\ndef test_moyenne():\n    assert duree_moyenne([30, 60, 90]) == 60\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait duree_moyenne.\n```python\ndef duree_moyenne(durees):\n    if not durees:\n        return 0\n    return sum(durees) / len(durees)\n```",
+  "reponse": "La fonction additionne les durées et divise par leur nombre. Une liste vide renvoie 0."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction compter_par_priorite(tickets) qui renvoie le nombre de tickets par priorité, sous forme d'un dictionnaire {1: n1, 2: n2, 3: n3}.",
+  "reponse": "```python\ndef compter_par_priorite(tickets):\n    comptes = {1: 0, 2: 0, 3: 0}\n    for t in tickets:\n        comptes[t[\"priorite\"]] += 1\n    return comptes\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python compter_par_priorite(tickets), elle renvoie le nombre de tickets par priorité, sous forme d'un dictionnaire {1: n1, 2: n2, 3: n3}.",
+  "reponse": "```python\ndef compter_par_priorite(tickets):\n    comptes = {1: 0, 2: 0, 3: 0}\n    for t in tickets:\n        comptes[t[\"priorite\"]] += 1\n    return comptes\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de compter_par_priorite.\n```python\ndef compter_par_priorite(tickets):\n    comptes = {1: 0, 2: 0, 3: 0}\n    for t in tickets:\n        comptes[t[\"priorite\"]] += 1\n    return comptes\n```",
+  "reponse": "```python\ndef test_comptes():\n    tickets = [{\"priorite\": 1}, {\"priorite\": 3}, {\"priorite\": 1}]\n    assert compter_par_priorite(tickets) == {1: 2, 2: 0, 3: 1}\n\ndef test_liste_vide():\n    assert compter_par_priorite([]) == {1: 0, 2: 0, 3: 0}\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal compter_par_priorite\n```python\ndef compter_par_priorite(tickets):\n    comptes = {1: 0, 2: 0, 3: 0}\n    for t in tickets:\n        comptes[t[\"priorite\"]] += 1\n    return comptes\n```",
+  "reponse": "```python\ndef test_comptes():\n    tickets = [{\"priorite\": 1}, {\"priorite\": 3}, {\"priorite\": 1}]\n    assert compter_par_priorite(tickets) == {1: 2, 2: 0, 3: 1}\n\ndef test_liste_vide():\n    assert compter_par_priorite([]) == {1: 0, 2: 0, 3: 0}\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait compter_par_priorite.\n```python\ndef compter_par_priorite(tickets):\n    comptes = {1: 0, 2: 0, 3: 0}\n    for t in tickets:\n        comptes[t[\"priorite\"]] += 1\n    return comptes\n```",
+  "reponse": "La fonction part de compteurs à zéro pour les trois priorités, puis ajoute un pour chaque ticket selon sa priorité."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction urgents(tickets) qui renvoie la liste des titres des tickets ouverts de priorité 1.",
+  "reponse": "```python\ndef urgents(tickets):\n    return [t[\"titre\"] for t in tickets if t[\"statut\"] == \"ouvert\" and t[\"priorite\"] == 1]\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python urgents(tickets), elle renvoie la liste des titres des tickets ouverts de priorité 1.",
+  "reponse": "```python\ndef urgents(tickets):\n    return [t[\"titre\"] for t in tickets if t[\"statut\"] == \"ouvert\" and t[\"priorite\"] == 1]\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de urgents.\n```python\ndef urgents(tickets):\n    return [t[\"titre\"] for t in tickets if t[\"statut\"] == \"ouvert\" and t[\"priorite\"] == 1]\n```",
+  "reponse": "```python\ndef test_seuls_les_urgents():\n    tickets = [\n        {\"titre\": \"A\", \"statut\": \"ouvert\", \"priorite\": 1},\n        {\"titre\": \"B\", \"statut\": \"ferme\", \"priorite\": 1},\n        {\"titre\": \"C\", \"statut\": \"ouvert\", \"priorite\": 2},\n    ]\n    assert urgents(tickets) == [\"A\"]\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal urgents\n```python\ndef urgents(tickets):\n    return [t[\"titre\"] for t in tickets if t[\"statut\"] == \"ouvert\" and t[\"priorite\"] == 1]\n```",
+  "reponse": "```python\ndef test_seuls_les_urgents():\n    tickets = [\n        {\"titre\": \"A\", \"statut\": \"ouvert\", \"priorite\": 1},\n        {\"titre\": \"B\", \"statut\": \"ferme\", \"priorite\": 1},\n        {\"titre\": \"C\", \"statut\": \"ouvert\", \"priorite\": 2},\n    ]\n    assert urgents(tickets) == [\"A\"]\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait urgents.\n```python\ndef urgents(tickets):\n    return [t[\"titre\"] for t in tickets if t[\"statut\"] == \"ouvert\" and t[\"priorite\"] == 1]\n```",
+  "reponse": "La fonction garde les tickets à la fois ouverts et de priorité 1, et renvoie seulement leurs titres."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction code_postal_valide(code) qui renvoie True si le code postal marocain est fait de 5 chiffres exactement.",
+  "reponse": "```python\ndef code_postal_valide(code):\n    return len(code) == 5 and code.isdigit()\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python code_postal_valide(code), elle renvoie True si le code postal marocain est fait de 5 chiffres exactement.",
+  "reponse": "```python\ndef code_postal_valide(code):\n    return len(code) == 5 and code.isdigit()\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de code_postal_valide.\n```python\ndef code_postal_valide(code):\n    return len(code) == 5 and code.isdigit()\n```",
+  "reponse": "```python\ndef test_code_correct():\n    assert code_postal_valide(\"30000\")\n\ndef test_trop_court():\n    assert not code_postal_valide(\"3000\")\n\ndef test_avec_lettre():\n    assert not code_postal_valide(\"3000A\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal code_postal_valide\n```python\ndef code_postal_valide(code):\n    return len(code) == 5 and code.isdigit()\n```",
+  "reponse": "```python\ndef test_code_correct():\n    assert code_postal_valide(\"30000\")\n\ndef test_trop_court():\n    assert not code_postal_valide(\"3000\")\n\ndef test_avec_lettre():\n    assert not code_postal_valide(\"3000A\")\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait code_postal_valide.\n```python\ndef code_postal_valide(code):\n    return len(code) == 5 and code.isdigit()\n```",
+  "reponse": "La fonction accepte le code s'il fait exactement 5 caractères, tous des chiffres."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction telephone_valide(numero) qui renvoie True si le numéro de téléphone commence par 06 ou 07 et contient 10 chiffres.",
+  "reponse": "```python\ndef telephone_valide(numero):\n    return len(numero) == 10 and numero.isdigit() and numero[:2] in (\"06\", \"07\")\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python telephone_valide(numero), elle renvoie True si le numéro de téléphone commence par 06 ou 07 et contient 10 chiffres.",
+  "reponse": "```python\ndef telephone_valide(numero):\n    return len(numero) == 10 and numero.isdigit() and numero[:2] in (\"06\", \"07\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de telephone_valide.\n```python\ndef telephone_valide(numero):\n    return len(numero) == 10 and numero.isdigit() and numero[:2] in (\"06\", \"07\")\n```",
+  "reponse": "```python\ndef test_numero_correct():\n    assert telephone_valide(\"0612345678\")\n\ndef test_mauvais_prefixe():\n    assert not telephone_valide(\"0512345678\")\n\ndef test_trop_court():\n    assert not telephone_valide(\"061234567\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal telephone_valide\n```python\ndef telephone_valide(numero):\n    return len(numero) == 10 and numero.isdigit() and numero[:2] in (\"06\", \"07\")\n```",
+  "reponse": "```python\ndef test_numero_correct():\n    assert telephone_valide(\"0612345678\")\n\ndef test_mauvais_prefixe():\n    assert not telephone_valide(\"0512345678\")\n\ndef test_trop_court():\n    assert not telephone_valide(\"061234567\")\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait telephone_valide.\n```python\ndef telephone_valide(numero):\n    return len(numero) == 10 and numero.isdigit() and numero[:2] in (\"06\", \"07\")\n```",
+  "reponse": "La fonction vérifie que le numéro a 10 chiffres et qu'il commence par 06 ou 07, les préfixes des mobiles marocains."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction sans_doublons(elements) qui renvoie la liste sans doublons, en gardant l'ordre de première apparition.",
+  "reponse": "```python\ndef sans_doublons(elements):\n    vus = []\n    for e in elements:\n        if e not in vus:\n            vus.append(e)\n    return vus\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python sans_doublons(elements), elle renvoie la liste sans doublons, en gardant l'ordre de première apparition.",
+  "reponse": "```python\ndef sans_doublons(elements):\n    vus = []\n    for e in elements:\n        if e not in vus:\n            vus.append(e)\n    return vus\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de sans_doublons.\n```python\ndef sans_doublons(elements):\n    vus = []\n    for e in elements:\n        if e not in vus:\n            vus.append(e)\n    return vus\n```",
+  "reponse": "```python\ndef test_doublons_retires():\n    assert sans_doublons([3, 1, 3, 2, 1]) == [3, 1, 2]\n\ndef test_liste_vide():\n    assert sans_doublons([]) == []\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal sans_doublons\n```python\ndef sans_doublons(elements):\n    vus = []\n    for e in elements:\n        if e not in vus:\n            vus.append(e)\n    return vus\n```",
+  "reponse": "```python\ndef test_doublons_retires():\n    assert sans_doublons([3, 1, 3, 2, 1]) == [3, 1, 2]\n\ndef test_liste_vide():\n    assert sans_doublons([]) == []\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait sans_doublons.\n```python\ndef sans_doublons(elements):\n    vus = []\n    for e in elements:\n        if e not in vus:\n            vus.append(e)\n    return vus\n```",
+  "reponse": "La fonction parcourt la liste et n'ajoute chaque élément que la première fois qu'elle le rencontre. L'ordre d'origine est gardé."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction extension(nom_fichier) qui renvoie l'extension d'un nom de fichier en minuscules, sans le point, ou une chaîne vide s'il n'y en a pas.",
+  "reponse": "```python\ndef extension(nom_fichier):\n    if \".\" not in nom_fichier:\n        return \"\"\n    return nom_fichier.rsplit(\".\", 1)[1].lower()\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python extension(nom_fichier), elle renvoie l'extension d'un nom de fichier en minuscules, sans le point, ou une chaîne vide s'il n'y en a pas.",
+  "reponse": "```python\ndef extension(nom_fichier):\n    if \".\" not in nom_fichier:\n        return \"\"\n    return nom_fichier.rsplit(\".\", 1)[1].lower()\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de extension.\n```python\ndef extension(nom_fichier):\n    if \".\" not in nom_fichier:\n        return \"\"\n    return nom_fichier.rsplit(\".\", 1)[1].lower()\n```",
+  "reponse": "```python\ndef test_extension_simple():\n    assert extension(\"capture.PNG\") == \"png\"\n\ndef test_sans_extension():\n    assert extension(\"LISEZMOI\") == \"\"\n\ndef test_plusieurs_points():\n    assert extension(\"rapport.final.pdf\") == \"pdf\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal extension\n```python\ndef extension(nom_fichier):\n    if \".\" not in nom_fichier:\n        return \"\"\n    return nom_fichier.rsplit(\".\", 1)[1].lower()\n```",
+  "reponse": "```python\ndef test_extension_simple():\n    assert extension(\"capture.PNG\") == \"png\"\n\ndef test_sans_extension():\n    assert extension(\"LISEZMOI\") == \"\"\n\ndef test_plusieurs_points():\n    assert extension(\"rapport.final.pdf\") == \"pdf\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait extension.\n```python\ndef extension(nom_fichier):\n    if \".\" not in nom_fichier:\n        return \"\"\n    return nom_fichier.rsplit(\".\", 1)[1].lower()\n```",
+  "reponse": "La fonction coupe le nom sur le dernier point et rend ce qui suit, en minuscules. Sans point, elle rend une chaîne vide."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction piece_jointe_autorisee(nom_fichier) qui renvoie True si la pièce jointe a une extension autorisée, png, jpg ou pdf.",
+  "reponse": "```python\ndef piece_jointe_autorisee(nom_fichier):\n    return nom_fichier.rsplit(\".\", 1)[-1].lower() in (\"png\", \"jpg\", \"pdf\")\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python piece_jointe_autorisee(nom_fichier), elle renvoie True si la pièce jointe a une extension autorisée, png, jpg ou pdf.",
+  "reponse": "```python\ndef piece_jointe_autorisee(nom_fichier):\n    return nom_fichier.rsplit(\".\", 1)[-1].lower() in (\"png\", \"jpg\", \"pdf\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de piece_jointe_autorisee.\n```python\ndef piece_jointe_autorisee(nom_fichier):\n    return nom_fichier.rsplit(\".\", 1)[-1].lower() in (\"png\", \"jpg\", \"pdf\")\n```",
+  "reponse": "```python\ndef test_extensions_autorisees():\n    assert piece_jointe_autorisee(\"capture.png\") and piece_jointe_autorisee(\"doc.PDF\")\n\ndef test_extension_refusee():\n    assert not piece_jointe_autorisee(\"script.exe\")\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal piece_jointe_autorisee\n```python\ndef piece_jointe_autorisee(nom_fichier):\n    return nom_fichier.rsplit(\".\", 1)[-1].lower() in (\"png\", \"jpg\", \"pdf\")\n```",
+  "reponse": "```python\ndef test_extensions_autorisees():\n    assert piece_jointe_autorisee(\"capture.png\") and piece_jointe_autorisee(\"doc.PDF\")\n\ndef test_extension_refusee():\n    assert not piece_jointe_autorisee(\"script.exe\")\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait piece_jointe_autorisee.\n```python\ndef piece_jointe_autorisee(nom_fichier):\n    return nom_fichier.rsplit(\".\", 1)[-1].lower() in (\"png\", \"jpg\", \"pdf\")\n```",
+  "reponse": "La fonction lit l'extension du fichier en minuscules et l'accepte seulement si c'est png, jpg ou pdf."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction compter_mots(texte) qui renvoie le nombre de mots d'un texte.",
+  "reponse": "```python\ndef compter_mots(texte):\n    return len(texte.split())\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python compter_mots(texte), elle renvoie le nombre de mots d'un texte.",
+  "reponse": "```python\ndef compter_mots(texte):\n    return len(texte.split())\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de compter_mots.\n```python\ndef compter_mots(texte):\n    return len(texte.split())\n```",
+  "reponse": "```python\ndef test_phrase():\n    assert compter_mots(\"le bouton ne répond pas\") == 5\n\ndef test_texte_vide():\n    assert compter_mots(\"   \") == 0\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal compter_mots\n```python\ndef compter_mots(texte):\n    return len(texte.split())\n```",
+  "reponse": "```python\ndef test_phrase():\n    assert compter_mots(\"le bouton ne répond pas\") == 5\n\ndef test_texte_vide():\n    assert compter_mots(\"   \") == 0\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait compter_mots.\n```python\ndef compter_mots(texte):\n    return len(texte.split())\n```",
+  "reponse": "La fonction découpe le texte sur les espaces et compte les morceaux. Un texte vide ou fait d'espaces donne 0."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction retirer_lignes_vides(texte) qui renvoie la description sans les lignes vides.",
+  "reponse": "```python\ndef retirer_lignes_vides(texte):\n    return \"\\n\".join(l for l in texte.splitlines() if l.strip())\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python retirer_lignes_vides(texte), elle renvoie la description sans les lignes vides.",
+  "reponse": "```python\ndef retirer_lignes_vides(texte):\n    return \"\\n\".join(l for l in texte.splitlines() if l.strip())\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de retirer_lignes_vides.\n```python\ndef retirer_lignes_vides(texte):\n    return \"\\n\".join(l for l in texte.splitlines() if l.strip())\n```",
+  "reponse": "```python\ndef test_lignes_vides_retirees():\n    assert retirer_lignes_vides(\"a\\n\\n  \\nb\") == \"a\\nb\"\n\ndef test_sans_ligne_vide():\n    assert retirer_lignes_vides(\"a\\nb\") == \"a\\nb\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal retirer_lignes_vides\n```python\ndef retirer_lignes_vides(texte):\n    return \"\\n\".join(l for l in texte.splitlines() if l.strip())\n```",
+  "reponse": "```python\ndef test_lignes_vides_retirees():\n    assert retirer_lignes_vides(\"a\\n\\n  \\nb\") == \"a\\nb\"\n\ndef test_sans_ligne_vide():\n    assert retirer_lignes_vides(\"a\\nb\") == \"a\\nb\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait retirer_lignes_vides.\n```python\ndef retirer_lignes_vides(texte):\n    return \"\\n\".join(l for l in texte.splitlines() if l.strip())\n```",
+  "reponse": "La fonction découpe le texte en lignes, garde celles qui contiennent autre chose que des espaces, puis les recolle."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction reassigner(ticket, utilisateur) qui réassigne le ticket à un nouvel utilisateur et renvoie l'ancien assigné.",
+  "reponse": "```python\ndef reassigner(ticket, utilisateur):\n    ancien = ticket.get(\"assigne\")\n    ticket[\"assigne\"] = utilisateur\n    return ancien\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python reassigner(ticket, utilisateur), elle réassigne le ticket à un nouvel utilisateur et renvoie l'ancien assigné.",
+  "reponse": "```python\ndef reassigner(ticket, utilisateur):\n    ancien = ticket.get(\"assigne\")\n    ticket[\"assigne\"] = utilisateur\n    return ancien\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de reassigner.\n```python\ndef reassigner(ticket, utilisateur):\n    ancien = ticket.get(\"assigne\")\n    ticket[\"assigne\"] = utilisateur\n    return ancien\n```",
+  "reponse": "```python\ndef test_ancien_rendu():\n    ticket = {\"assigne\": \"omar\"}\n    assert reassigner(ticket, \"sara\") == \"omar\"\n    assert ticket[\"assigne\"] == \"sara\"\n\ndef test_sans_assigne():\n    assert reassigner({}, \"sara\") is None\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal reassigner\n```python\ndef reassigner(ticket, utilisateur):\n    ancien = ticket.get(\"assigne\")\n    ticket[\"assigne\"] = utilisateur\n    return ancien\n```",
+  "reponse": "```python\ndef test_ancien_rendu():\n    ticket = {\"assigne\": \"omar\"}\n    assert reassigner(ticket, \"sara\") == \"omar\"\n    assert ticket[\"assigne\"] == \"sara\"\n\ndef test_sans_assigne():\n    assert reassigner({}, \"sara\") is None\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait reassigner.\n```python\ndef reassigner(ticket, utilisateur):\n    ancien = ticket.get(\"assigne\")\n    ticket[\"assigne\"] = utilisateur\n    return ancien\n```",
+  "reponse": "La fonction note l'ancien assigné, met le nouvel utilisateur à sa place, et renvoie l'ancien, ou None s'il n'y en avait pas."
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction date_francaise(date_iso) qui renvoie la date au format JJ/MM/AAAA à partir d'une date AAAA-MM-JJ.",
+  "reponse": "```python\ndef date_francaise(date_iso):\n    annee, mois, jour = date_iso.split(\"-\")\n    return f\"{jour}/{mois}/{annee}\"\n```"
+ },
+ {
+  "type": "fonction",
+  "demande": "Code la fonction Python date_francaise(date_iso), elle renvoie la date au format JJ/MM/AAAA à partir d'une date AAAA-MM-JJ.",
+  "reponse": "```python\ndef date_francaise(date_iso):\n    annee, mois, jour = date_iso.split(\"-\")\n    return f\"{jour}/{mois}/{annee}\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de date_francaise.\n```python\ndef date_francaise(date_iso):\n    annee, mois, jour = date_iso.split(\"-\")\n    return f\"{jour}/{mois}/{annee}\"\n```",
+  "reponse": "```python\ndef test_conversion():\n    assert date_francaise(\"2026-11-16\") == \"16/11/2026\"\n\ndef test_premier_janvier():\n    assert date_francaise(\"2027-01-01\") == \"01/01/2027\"\n```"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal date_francaise\n```python\ndef date_francaise(date_iso):\n    annee, mois, jour = date_iso.split(\"-\")\n    return f\"{jour}/{mois}/{annee}\"\n```",
+  "reponse": "```python\ndef test_conversion():\n    assert date_francaise(\"2026-11-16\") == \"16/11/2026\"\n\ndef test_premier_janvier():\n    assert date_francaise(\"2027-01-01\") == \"01/01/2027\"\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait date_francaise.\n```python\ndef date_francaise(date_iso):\n    annee, mois, jour = date_iso.split(\"-\")\n    return f\"{jour}/{mois}/{annee}\"\n```",
+  "reponse": "La fonction découpe la date sur les tirets, puis la réécrit dans l'ordre jour, mois, année, séparés par des barres obliques."
+ }
+]

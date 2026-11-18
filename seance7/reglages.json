@@ -1,5 +1,5 @@
 {
-  "fonction": null,
-  "tests": null,
-  "explication": null
+  "fonction":    { "temperature": 0.2, "p_noyau": 0.95 },
+  "tests": {"temperature": 0.2, "p_noyau": 0.9},
+  "explication": { "temperature": 0.7, "p_noyau": 0.9 }
 }

@@ -1,0 +1,8 @@
+doda_entrainement.json et doda_test.json reprennent les phrases du Darija Open Dataset
+(DODa), https://github.com/darija-open-dataset/dataset, fichier sentences/sentences.csv,
+réparties au hasard en 46 818 phrases d'entraînement et 2 000 phrases de test.
+Le champ "francais" de doda_test.json est une traduction ajoutée pour le cours,
+elle ne fait pas partie du DODa.
+
+Licence Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
+Usage commercial interdit.

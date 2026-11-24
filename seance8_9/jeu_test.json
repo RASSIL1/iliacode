@@ -1,0 +1,63 @@
+[
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction verifier_email(adresse) qui renvoie True si l'adresse contient un @ suivi plus loin d'un point.",
+  "verification": "assert verifier_email('sara@ilia.ma')\nassert not verifier_email('sara@iliama')\nassert not verifier_email('sara.ilia.ma')"
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction ticket_critique(ticket) qui renvoie True si le ticket est ouvert et de priorité 1.",
+  "verification": "assert ticket_critique({'statut': 'ouvert', 'priorite': 1})\nassert not ticket_critique({'statut': 'ferme', 'priorite': 1})\nassert not ticket_critique({'statut': 'ouvert', 'priorite': 2})"
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction moyenne_priorite(tickets) qui renvoie la moyenne des priorités des tickets, ou 0 si la liste est vide.",
+  "verification": "assert moyenne_priorite([]) == 0\nassert moyenne_priorite([{'priorite': 1}, {'priorite': 3}]) == 2"
+ },
+ {
+  "type": "fonction",
+  "demande": "ktb liya fonction compter_fermes(tickets) li katrje3 ch7al mn ticket l statut dyalo \"ferme\"",
+  "verification": "assert compter_fermes([]) == 0\nassert compter_fermes([{'statut': 'ferme'}, {'statut': 'ouvert'}, {'statut': 'ferme'}]) == 2"
+ },
+ {
+  "type": "fonction",
+  "demande": "Écris la fonction minutes_en_heures(minutes) qui renvoie le nombre d'heures entières contenues dans un nombre de minutes.",
+  "verification": "assert minutes_en_heures(125) == 2\nassert minutes_en_heures(59) == 0"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de titre_trop_long.\n```python\ndef titre_trop_long(titre):\n    return len(titre) > 80\n```",
+  "juste": "def titre_trop_long(titre):\n    return len(titre) > 80",
+  "faux": "def titre_trop_long(titre):\n    return len(titre) < 80"
+ },
+ {
+  "type": "tests",
+  "demande": "ktb liya les tests dyal statut_valide\n```python\ndef statut_valide(statut):\n    return statut in (\"ouvert\", \"en_cours\", \"ferme\")\n```",
+  "juste": "def statut_valide(statut):\n    return statut in ('ouvert', 'en_cours', 'ferme')",
+  "faux": "def statut_valide(statut):\n    return True"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de pourcentage.\n```python\ndef pourcentage(partie, total):\n    if total == 0:\n        return 0\n    return round(100 * partie / total)\n```",
+  "juste": "def pourcentage(partie, total):\n    if total == 0:\n        return 0\n    return round(100 * partie / total)",
+  "faux": "def pourcentage(partie, total):\n    if total == 0:\n        return 0\n    return round(partie / total)"
+ },
+ {
+  "type": "tests",
+  "demande": "Écris les tests de ajouter_etiquette.\n```python\ndef ajouter_etiquette(ticket, etiquette):\n    ticket.setdefault(\"etiquettes\", [])\n    if etiquette not in ticket[\"etiquettes\"]:\n        ticket[\"etiquettes\"].append(etiquette)\n    return ticket\n```",
+  "juste": "def ajouter_etiquette(ticket, etiquette):\n    ticket.setdefault('etiquettes', [])\n    if etiquette not in ticket['etiquettes']:\n        ticket['etiquettes'].append(etiquette)\n    return ticket",
+  "faux": "def ajouter_etiquette(ticket, etiquette):\n    ticket['etiquettes'] = [etiquette]\n    return ticket"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait verifier_email.\n```python\ndef verifier_email(adresse):\n    return \"@\" in adresse and \".\" in adresse.split(\"@\", 1)[1]\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "Explique ce que fait nombre_retards.\n```python\ndef nombre_retards(tickets, jour):\n    return sum(1 for t in tickets if jour - t[\"ouverture\"] > 7)\n```"
+ },
+ {
+  "type": "explication",
+  "demande": "chreh liya chno katdir had la fonction\n```python\ndef dernier_commentaire(ticket):\n    commentaires = ticket.get(\"commentaires\", [])\n    return commentaires[-1] if commentaires else None\n```"
+ }
+]

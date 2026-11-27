@@ -15,11 +15,18 @@ def lire_reglages(chemin="../seance7/reglages.json"):
 
 
 def plier(mot):
+  if mot.lower() in LEXIQUE or "_" in mot or re.search("[a-z][A-Z]", mot):
     return mot
+  mot = re.sub(r"([^\W\d_])\1{2,}", r"\1", mot.lower())
+  return mot.replace("sh", "ch") 
 
 
 def canonicaliser(texte):
-    return texte
+  morceaux = texte.split("```")
+  for i in range(0, len(morceaux), 2):
+    sans_signes = re.sub("[ً-ْـ]", "", morceaux[i])
+    morceaux[i] = re.sub(r"\w+", lambda m: plier(m.group()), sans_signes)
+  return "```".join(morceaux)
 
 
 def demander(texte, type_demande, modele="moteur", n_max=400):
